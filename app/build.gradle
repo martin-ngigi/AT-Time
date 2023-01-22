@@ -53,5 +53,8 @@ dependencies {
     //GENERATE QR CODE
     //implementation 'androidmads.library.qrgenearator:QRGenearator:1.0.3'
     implementation 'com.github.androidmads:QRGenerator:1.0.1'
+
+    //read qr code
+    implementation 'com.google.android.gms:play-services-vision:20.1.3'
 }
 
