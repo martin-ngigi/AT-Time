@@ -31,7 +31,7 @@
         android:layout_marginTop="20dp">
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/addHomeCV"
+            android:id="@+id/generateQRCV"
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:layout_margin="10dp"
@@ -39,7 +39,7 @@
             android:padding="10dp"
             app:cardBackgroundColor="@color/white"
             app:cardCornerRadius="10dp"
-            app:layout_constraintEnd_toStartOf="@+id/allHomeCV"
+            app:layout_constraintEnd_toStartOf="@+id/scanQRCV"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -76,7 +76,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/allHomeCV"
+            android:id="@+id/scanQRCV"
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:layout_marginEnd="10dp"
@@ -86,8 +86,8 @@
             app:cardCornerRadius="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/addHomeCV"
-            app:layout_constraintTop_toTopOf="@+id/addHomeCV">
+            app:layout_constraintStart_toEndOf="@+id/generateQRCV"
+            app:layout_constraintTop_toTopOf="@+id/generateQRCV">
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -122,7 +122,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/latestHomeCV"
+            android:id="@+id/smsCV"
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:layout_marginStart="10dp"
@@ -132,10 +132,10 @@
             android:padding="10dp"
             app:cardBackgroundColor="@color/white"
             app:cardCornerRadius="10dp"
-            app:layout_constraintEnd_toStartOf="@+id/latest2HomeCV"
+            app:layout_constraintEnd_toStartOf="@+id/airtimeCV"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/addHomeCV">
+            app:layout_constraintTop_toBottomOf="@+id/generateQRCV">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -169,7 +169,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/latest2HomeCV"
+            android:id="@+id/airtimeCV"
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:layout_marginEnd="10dp"
@@ -179,8 +179,8 @@
             app:cardCornerRadius="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/latestHomeCV"
-            app:layout_constraintTop_toTopOf="@+id/latestHomeCV">
+            app:layout_constraintStart_toEndOf="@+id/smsCV"
+            app:layout_constraintTop_toTopOf="@+id/smsCV">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -224,10 +224,10 @@
             android:padding="10dp"
             app:cardBackgroundColor="@color/white"
             app:cardCornerRadius="10dp"
-            app:layout_constraintEnd_toStartOf="@+id/latest2HomeCV"
+            app:layout_constraintEnd_toStartOf="@+id/airtimeCV"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/latestHomeCV">
+            app:layout_constraintTop_toBottomOf="@+id/smsCV">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
