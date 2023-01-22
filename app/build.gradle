@@ -49,4 +49,9 @@ dependencies {
     //SOLVE GUAVA ERROR
     implementation 'com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava'
     implementation 'androidx.multidex:multidex:2.0.1'
+
+    //GENERATE QR CODE
+    //implementation 'androidmads.library.qrgenearator:QRGenearator:1.0.3'
+    implementation 'com.github.androidmads:QRGenerator:1.0.1'
 }
+

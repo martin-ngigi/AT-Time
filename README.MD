@@ -4,4 +4,5 @@
 
 ## Links:
 - [Send Airtime Documentation](https://developers.africastalking.com/docs/airtime/sending)
-- 
+- [Generate QR Code](https://www.geeksforgeeks.org/how-to-generate-qr-code-in-android/)
+- [Read QR Code](https://www.geeksforgeeks.org/how-to-read-qr-code-using-camview-library-in-android/)
