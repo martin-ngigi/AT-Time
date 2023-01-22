@@ -25,6 +25,13 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    /**
+     * MARTIN ADDED
+     */
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -35,4 +42,11 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    // Get all AfricasTalkingLtd services
+    implementation 'com.github.AfricasTalkingLtd.africastalking-java:core:3.4.8'
+
+    //SOLVE GUAVA ERROR
+    implementation 'com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava'
+    implementation 'androidx.multidex:multidex:2.0.1'
 }

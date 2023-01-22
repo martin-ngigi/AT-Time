@@ -3,6 +3,12 @@ pluginManagement {
         gradlePluginPortal()
         google()
         mavenCentral()
+        /**
+         * MARTIN ADDED
+         */
+        maven {
+            url  "https://jitpack.io"
+        }
     }
 }
 dependencyResolutionManagement {
@@ -10,6 +16,12 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        /**
+         * MARTIN ADDED
+         */
+        maven {
+            url  "https://jitpack.io"
+        }
     }
 }
 rootProject.name = "AT Time"
