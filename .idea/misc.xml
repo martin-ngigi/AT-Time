@@ -3,11 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ATTime/app/src/main/res/layout/activity_congraturations.xml" value="0.18854166666666666" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/ATTime/app/src/main/res/layout/activity_dashboard.xml" value="0.25" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/ATTime/app/src/main/res/layout/activity_generate_qractivity.xml" value="0.1" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/ATTime/app/src/main/res/layout/activity_read_qractivity.xml" value="0.21" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/ATTime/app/src/main/res/layout/activity_scanned_barcode.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ATTime/app/src/main/res/layout/activity_scanned_qr_or_barcode.xml" value="0.18854166666666666" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/ATTime/app/src/main/res/layout/activity_send_airtime.xml" value="0.16944444444444445" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ATTime/app/src/main/res/layout/progress_bar.xml" value="0.18854166666666666" />
       </map>
     </option>
   </component>

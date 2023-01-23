@@ -3,15 +3,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp">
+    android:padding="10dp"
+    android:background="@color/white"
+    tools:context=".ScannedQRorBarcodeActivity">
+
+    <EditText
+        android:id="@+id/phoneET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:hint="Phone i.e. +254712345678"
+        android:paddingLeft="5dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black" />
 
     <SurfaceView
         android:id="@+id/surfaceView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/btnAction"
-        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/phoneET"
         android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_centerVertical="true" />
 
     <TextView
@@ -20,7 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="120dp"
         android:text="No Barcode Detected"
         android:textColor="@android:color/white"
         android:textSize="20sp" />
@@ -31,5 +44,5 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:text="ADD CONTENT IN THE MAIL" />
+        android:text="Redeem" />
 </RelativeLayout>

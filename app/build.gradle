@@ -32,6 +32,13 @@ android {
     buildFeatures {
         viewBinding = true
     }
+
+    /**
+     * Caused by: java.lang.RuntimeException: Duplicate class okio.AsyncTimeout found in modules core-3.4.8 (com.github.AfricasTalkingLtd.africastalking-java:core:3.4.8) and okio-1.17.4 (com.squareup.okio:okio:1.17.4)
+     */
+    configurations{
+        all*.exclude module: 'okio'
+    }
 }
 
 dependencies {
@@ -56,5 +63,8 @@ dependencies {
 
     //read qr code
     implementation 'com.google.android.gms:play-services-vision:20.1.3'
+
+    // Lottie
+    implementation "com.airbnb.android:lottie:5.0.3"
 }
 

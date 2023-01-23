@@ -26,5 +26,9 @@ public class DashboardActivity extends AppCompatActivity {
         binding.scanQRCV.setOnClickListener( e -> {
             startActivity(new Intent(DashboardActivity.this, ScannedQRorBarcodeActivity.class));
         });
+
+        binding.airtimeCV.setOnClickListener( e -> {
+            startActivity(new Intent(DashboardActivity.this, SendAirtimeActivity.class));
+        });
     }
 }

@@ -9,6 +9,7 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.util.Log;
 import android.util.SparseArray;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
@@ -25,13 +26,15 @@ import java.io.IOException;
 public class ScannedQRorBarcodeActivity extends AppCompatActivity {
 
     SurfaceView surfaceView;
-    TextView txtBarcodeValue;
+    TextView txtBarcodeValue, phoneET;
     private BarcodeDetector barcodeDetector;
     private CameraSource cameraSource;
     private static final int REQUEST_CAMERA_PERMISSION = 201;
     Button btnAction;
     String intentData = "";
     boolean isDataScanned = false;
+    String my_phone="";
+    String TAG ="ScannedQRorBarcodeActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,15 +47,32 @@ public class ScannedQRorBarcodeActivity extends AppCompatActivity {
 
     private void initViews() {
         txtBarcodeValue = findViewById(R.id.txtBarcodeValue);
+        phoneET = findViewById(R.id.phoneET);
         surfaceView = findViewById(R.id.surfaceView);
         btnAction = findViewById(R.id.btnAction);
+
         btnAction.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //get phone number.
+                my_phone  = phoneET.getText().toString();
                 if (intentData.length() > 0) {
                     if (isDataScanned){
                         Toast.makeText(ScannedQRorBarcodeActivity.this, "DATA SCANNED IS: : "+intentData, Toast.LENGTH_SHORT).show();
-                        //startActivity(new Intent(ScannedBarcodeActivity.this, EmailActivity.class).putExtra("email_address", intentData));
+                        if (my_phone.isEmpty()){
+                            Toast.makeText(ScannedQRorBarcodeActivity.this, "Enter phone number", Toast.LENGTH_SHORT).show();
+                            return; //dont proceed
+                        }
+                        try {
+                            Constants.PHONE = my_phone;
+                            Constants.AMOUNT = Integer.parseInt(intentData);
+
+                        }
+                        catch (Exception e){
+                            Log.e(TAG, "onClick: "+e.toString());
+                            return;
+                        }
+                        startActivity(new Intent(ScannedQRorBarcodeActivity.this, CongraturationsActivity.class).putExtra("amount", intentData));
                     }
                     else {
                         startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(intentData)));
