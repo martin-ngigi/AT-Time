@@ -46,8 +46,8 @@ public class CongraturationsActivity extends AppCompatActivity {
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
 
-        String userName = ""; //get them from https://account.africastalking.com/apps/sandbox/settings/key
-        String api_Key = "";
+        String userName = Constants.userName; //get them from https://account.africastalking.com/apps/sandbox/settings/key
+        String api_Key = Constants.api_Key;
 
         //initialize sdk
         AfricasTalking.initialize(userName, api_Key);
@@ -77,7 +77,7 @@ public class CongraturationsActivity extends AppCompatActivity {
 
 
             int numberSent = response.numSent; //when successfull numSent should be more than 1 else less than 1
-            if (numberSent>1){
+            if (numberSent>=1){
                 //hide progress bar
                 binding.loginProgress.loadingProgress.setVisibility(View.GONE);
 
@@ -85,6 +85,8 @@ public class CongraturationsActivity extends AppCompatActivity {
                 Log.i(TAG, "buyAirtime: Airtime Sent Successfully. Response is "+response);
                 binding.lottieAnimCongratulations.setVisibility(View.VISIBLE);
                 binding.successTV.setVisibility(View.VISIBLE);
+
+                sendSMS();
             }
             else{
                 //hide progress bar
@@ -109,5 +111,12 @@ public class CongraturationsActivity extends AppCompatActivity {
             Toast.makeText(this, "Error occurred. Could not reach Africas Talking at the moment. Hint: "+e.toString(), Toast.LENGTH_SHORT).show();
             Log.e(TAG, "Error occurred. Could not reach Africas Talking at the moment. Hint: "+e.toString());
         }
+    }
+
+    private void sendSMS() {
+        //send sms
+        String messageTxt = "Hello, Thank you for attending the event. We hope to see you next time.";
+        MySms mySms =  new MySms();
+        mySms.sendSms(messageTxt);
     }
 }
